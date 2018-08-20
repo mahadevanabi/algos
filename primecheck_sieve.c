@@ -12,10 +12,10 @@ int main(){
         a[i]=true;
     
     
-    for(i=2;i<=sqrt(n);i++){
+    for(i=2;i<=sqrt(n);i++){ //i<=sqrt(n) can be re-written as i*i<=n
         if(a[i]==true){
             
-            for(j=i*i;j<=n;j=j+i){
+            for(j=i*i;j<=n;j=j+i){ //i*i is done here because till i*i privious loop is handled
                 a[j]=false;
             }
             
