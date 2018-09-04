@@ -26,3 +26,31 @@ int main()
 	return 0;
 }
 
+
+//one of the best menthod which takes o(n) time complexity.
+// catalan number can also be defined as 2nCn/n+1
+#include<stdio.h>
+ long int catalan(int n){
+ 	long int res=1;
+ 	
+ 	int k=n;
+ 	
+ 	if(k>n-k)
+ 		n-k;
+ 	for(int i=0;i<k;i++){
+ 		res*=(n-i);
+ 		res/=(i+1);
+ 	
+ 	}
+ 	return res/(n/2+1);
+ 
+ 
+ }
+
+
+int main(){
+	for(int i=0;i<10;i++)
+		printf("%ld ",catalan(i));
+
+	return 0;
+}
